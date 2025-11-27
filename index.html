@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 & Física - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <h1 class="logo">F1 <span class="highlight">Physics</span></h1>
+                <p class="tagline">La ciencia detrás de la velocidad</p>
+            </div>
+            <nav aria-label="Navegación Principal">
+                <ul class="nav-list">
+                    <li><a href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="aerodynamics.html">Aerodinámica y Auto</a></li>
+                    <li><a href="drivers-physics.html">Pilotos y Física</a></li>
+                </ul>
+            </nav>
+            <a href="#start-learning" class="btn cta-btn">Empezar</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="start-learning" class="container section text-center">
+            <h2>Más que velocidad, es ciencia</h2>
+            <div class="content-wrapper">
+                <p>
+                    En la Fórmula 1, ganar no depende solo de tener el motor más ruidoso. Detrás de cada victoria, existe una ingeniería de precisión donde la física es la protagonista. 
+                </p>
+                <p>
+                    Ingenieros y pilotos trabajan juntos dominando la inercia, el momento y la energía. El rendimiento es una ecuación compleja donde el talento humano desafía las leyes de la naturaleza.
+                </p>
+            </div>
+        </section>
+
+        <section class="section bg-light">
+            <div class="container">
+                <h2>¿Por qué importa la física?</h2>
+                <div class="grid-2-cols">
+                    <div>
+                        <p>
+                            La física dicta los límites de lo posible. Entender la aerodinámica permite diseñar coches que se peguen al suelo en curvas a más de 200 km/h. Sin la gestión adecuada de las fuerzas, los coches simplemente saldrían volando.
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Además, la eficiencia es clave. Las regulaciones limitan el combustible y la energía. Los principios de termodinámica son vitales para terminar la carrera lo más rápido posible.
+                        </p>
+                        <a href="aerodynamics.html" class="text-link">Explora la aerodinámica aquí &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section">
+            <h2>Conceptos Clave</h2>
+            <ul class="concept-grid">
+                <li class="card">
+                    <h3>Aerodinámica</h3>
+                    <p>Estudio del movimiento del aire, crucial para generar agarre y reducir resistencia.</p>
+                </li>
+                <li class="card">
+                    <h3>Carga Aerodinámica (Downforce)</h3>
+                    <p>Fuerza vertical que empuja el coche contra la pista para aumentar la adherencia.</p>
+                </li>
+                <li class="card">
+                    <h3>Resistencia (Drag)</h3>
+                    <p>Fuerza del aire que se opone al movimiento y que los ingenieros buscan minimizar en rectas.</p>
+                </li>
+                <li class="card">
+                    <h3>Fuerza G</h3>
+                    <p>Aceleración que sienten los pilotos al frenar o girar, medida en múltiplos de la gravedad.</p>
+                </li>
+                <li class="card">
+                    <h3>Agarre (Grip)</h3>
+                    <p>Fricción entre neumático y asfalto, esencial para transmitir potencia.</p>
+                </li>
+            </ul>
+            <div style="margin-top: 2rem; text-align: center;">
+                <p>Descubre cómo los humanos gestionan estas fuerzas en <a href="drivers-physics.html" class="text-link">Pilotos y Física</a>.</p>
+            </div>
+        </section>
+
+        <section class="section video-section bg-dark text-light">
+            <div class="container">
+                <h2>Video: Física en Acción</h2>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://youtu.be/tQgkt3y5DSg" 
+                        title="Video explicativo sobre la física en la Fórmula 1" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <div class="video-controls">
+                    <p class="small-text">Subtítulos (CC) disponibles en el reproductor.</p>
+                    <div class="btn-group">
+                        <button type="button" id="btn-captions" aria-expanded="false" aria-controls="captions-content" class="btn secondary-btn">
+                            Ver Transcripción
+                        </button>
+                        <button type="button" id="btn-ad" aria-expanded="false" aria-controls="ad-content" class="btn secondary-btn">
+                            Ver Audio Descripción
+                        </button>
+                    </div>
+                </div>
+
+                <div id="captions-content" class="transcript-box" hidden>
+                    <h3>Transcripción</h3>
+                    <p>
+                        [Música dinámica] Narrador: La F1 es el pináculo del deporte motor. (0:15) Vemos un coche en el túnel de viento. El aire fluye sobre el alerón, creando baja presión debajo y alta arriba: esto es Carga Aerodinámica. (0:45) Un piloto frena. La energía cinética se vuelve calor en los frenos a 1000°C. (1:10) La fricción de los neumáticos permite curvas a 5G.
+                    </p>
+                </div>
+
+                <div id="ad-content" class="ad-box" hidden>
+                    <h3>Audio Descripción</h3>
+                    <p>
+                        El video muestra coches de F1 en circuito soleado. Gráficos azules ilustran el flujo del aire sobre el chasis. Primer plano de un disco de freno al rojo vivo. Animación 3D de la goma del neumático deformándose contra el asfalto.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section">
+            <div class="form-wrapper">
+                <h2>Únete a la comunidad</h2>
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre <span aria-hidden="true">*</span></label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico <span aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">¿Qué te gustaría aprender? <span aria-hidden="true">*</span></label>
+                        <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="contact-info">
+                <h3>F1 Physics Project</h3>
+                <p><a href="mailto:f1physics@example.com">f1physics@example.com</a></p>
+            </div>
+            <nav aria-label="Navegación Secundaria">
+                <ul class="footer-links">
+                    <li><a href="#">Volver arriba</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="https://www.formula1.com" target="_blank" rel="noopener noreferrer">Sitio Oficial F1</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">&copy; 2023. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function setupToggle(btnId, contentId, labelShow, labelHide) {
+            const btn = document.getElementById(btnId);
+            const content = document.getElementById(contentId);
+            btn.addEventListener('click', () => {
+                const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', !isExpanded);
+                content.hidden = isExpanded;
+                btn.textContent = isExpanded ? labelShow : labelHide;
+            });			
+        }
+        setupToggle('btn-captions', 'captions-content', 'Ver Transcripción', 'Ocultar Transcripción');
+        setupToggle('btn-ad', 'ad-content', 'Ver Audio Descripción', 'Ocultar Audio Descripción');
+    </script>
+</body>
+</html>

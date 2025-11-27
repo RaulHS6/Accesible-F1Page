@@ -1,0 +1,298 @@
+/* ===============================
+   1. Reset & Variables
+   =============================== */
+:root {
+    --primary-red: #ff1801;      /* Rojo F1 vibrante */
+    --primary-dark: #b30500;     /* Rojo oscuro para hover */
+    --dark-bg: #15151e;          /* Fondo muy oscuro */
+    --panel-bg: #1e1e24;         /* Fondo para paneles oscuros */
+    --light-bg: #f8f9fa;         /* Blanco humo para secciones */
+    --text-dark: #2b2b2b;        /* Gris casi negro para texto */
+    --text-light: #ffffff;
+    --text-muted: #6c757d;
+    --accent-blue: #3d8bfd;      /* Azul para focos y enlaces */
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    
+    --max-width: 1100px;
+    --shadow-card: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-hover: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.7;
+    color: var(--text-dark);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===============================
+   2. Typography & Base
+   =============================== */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--dark-bg);
+}
+
+h1 { font-size: 2.5rem; text-transform: uppercase; letter-spacing: -1px; }
+h2 { font-size: 2rem; color: var(--primary-red); margin-top: 0.5rem; position: relative; display: inline-block; }
+h3 { font-size: 1.25rem; }
+
+p { margin-bottom: 1.2rem; font-size: 1rem; color: #444; }
+
+/* Enlaces */
+a { color: var(--primary-red); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--primary-dark); text-decoration: underline; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--accent-blue);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* ===============================
+   3. Layout Components
+   =============================== */
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section { padding: 4rem 0; }
+.bg-light { background-color: var(--light-bg); border-top: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea; }
+.bg-dark { background-color: var(--dark-bg); color: var(--text-light); }
+.bg-dark h2, .bg-dark p { color: var(--text-light); }
+
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .grid-2-cols { grid-template-columns: 1fr 1fr; }
+}
+
+/* ===============================
+   4. Header & Navigation
+   =============================== */
+.site-header {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding: 1.2rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-size: 1.8rem; margin: 0; color: white; font-style: italic; }
+.logo .highlight { color: var(--primary-red); }
+.tagline { font-size: 0.8rem; color: #bbb; margin-top: -5px; }
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.nav-list li a {
+    color: #e0e0e0;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-list li a:hover,
+.nav-list li a[aria-current="page"] {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+}
+
+/* ===============================
+   5. Buttons & Cards
+   =============================== */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.cta-btn, .submit-btn {
+    background-color: var(--primary-red);
+    color: white;
+}
+.cta-btn:hover, .submit-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(225, 6, 0, 0.3);
+    text-decoration: none; color: white;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--text-muted);
+    color: var(--text-dark);
+}
+.bg-dark .secondary-btn { border-color: #555; color: white; }
+.secondary-btn:hover { border-color: var(--primary-red); color: var(--primary-red); }
+
+/* Card Grid for Concepts */
+.concept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.card, .info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-card);
+    border-top: 4px solid var(--primary-red);
+    transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+.card h3 { color: var(--dark-bg); font-size: 1.1rem; margin-bottom: 0.5rem; }
+.card p { font-size: 0.95rem; color: #555; margin: 0; }
+
+/* ===============================
+   6. Images & Video
+   =============================== */
+.decorative-banner img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.responsive-img { width: 100%; height: auto; border-radius: 6px; }
+.shadow-img { box-shadow: var(--shadow-card); }
+
+.info-figure {
+    background: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-card);
+}
+.info-figure figcaption {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: black;
+    border-radius: 8px;
+    box-shadow: var(--shadow-hover);
+}
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+.video-controls { margin-top: 1rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.transcript-box, .ad-box {
+    background: #2a2a30;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--primary-red);
+    color: #e0e0e0;
+}
+.transcript-box p, .ad-box p { color: #ccc; }
+
+/* ===============================
+   7. Forms & Footer
+   =============================== */
+.contact-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-card);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group { margin-bottom: 1.5rem; }
+label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; }
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: #fafafa;
+}
+input:focus, textarea:focus { background-color: white; border-color: var(--accent-blue); }
+
+.site-footer {
+    background-color: var(--dark-bg);
+    color: #888;
+    padding: 3rem 0;
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+.footer-links a { color: #aaa; font-weight: 500; }
+.footer-links a:hover { color: white; text-decoration: none; }
+
+/* ===============================
+   8. Responsive Mobile
+   =============================== */
+@media (max-width: 768px) {
+    .header-content { flex-direction: column; text-align: center; gap: 1rem; }
+    .nav-list { flex-direction: column; width: 100%; gap: 0.5rem; }
+    .nav-list li a { display: block; padding: 0.8rem; background: rgba(255,255,255,0.05); }
+    .grid-2-cols { gap: 1.5rem; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+}
