@@ -2,9 +2,13 @@
    1. Reset & Variables
    =============================== */
 :root {
-    /* Rojo oscurecido para cumplir contraste WCAG AA */
-    --primary-red: #d10000;      
-    --primary-dark: #8a0000;     
+    /* Rojo oscuro para botones (texto blanco sobre rojo) - Pasa AAA */
+    --primary-red: #8a0000;      
+    --primary-dark: #5c0000;     
+    
+    /* Rojo brillante EXCLUSIVO para el logo sobre fondo oscuro */
+    --logo-accent: #ff3333;
+
     --dark-bg: #15151e;
     --panel-bg: #1e1e24;
     --light-bg: #f8f9fa;
@@ -56,7 +60,7 @@ p { margin-bottom: 1.2rem; font-size: 1rem; color: #333; }
 
 /* Enlaces */
 a { color: var(--primary-red); text-decoration: underline; transition: color 0.2s; }
-a:hover { color: var(--primary-dark); text-decoration: none; background-color: rgba(209, 0, 0, 0.05); }
+a:hover { color: var(--primary-dark); text-decoration: none; background-color: rgba(138, 0, 0, 0.05); }
 
 /* Focus visible: SC 2.4.7 (AA) */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
@@ -111,8 +115,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     align-items: center;
 }
 
-.logo { color: white; font-style: italic; }
-.logo .highlight { color: var(--primary-red); }
+/* LOGO: Estilos específicos */
+.logo { 
+    color: white; 
+    font-style: italic; 
+}
+/* CAMBIO: Usamos el rojo brillante aquí para máximo contraste sobre fondo oscuro */
+.logo .highlight { 
+    color: var(--logo-accent); 
+}
+
 .tagline { font-size: 0.8rem; color: #bbb; margin-top: -5px; }
 
 .nav-list {
@@ -159,13 +171,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .cta-btn, .submit-btn {
+    /* Mantenemos el rojo oscuro en botones para que el texto blanco resalte */
     background-color: var(--primary-red);
     color: #ffffff;
 }
 .cta-btn:hover, .submit-btn:hover {
     background-color: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(160, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(92, 0, 0, 0.4);
     color: #ffffff;
 }
 
@@ -260,7 +273,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     box-shadow: var(--shadow-card);
     max-width: 700px;
     margin: 0 auto;
-    /* CAMBIO: Borde gris oscuro para alto contraste */
     border: 2px solid #333;
 }
 
@@ -270,7 +282,6 @@ label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 1rem
 input, textarea {
     width: 100%;
     padding: 0.8rem;
-    /* CAMBIO: Borde de inputs más oscuro para mejor visibilidad */
     border: 2px solid #333;
     border-radius: 4px;
     font-family: var(--font-body);
@@ -282,7 +293,7 @@ input:focus, textarea:focus { background-color: white; border-color: var(--accen
 
 .site-footer {
     background-color: var(--dark-bg);
-    color: #ffffff; /* Texto general blanco */
+    color: #ffffff;
     padding: 3rem 0;
     margin-top: auto;
     border-top: 3px solid var(--primary-red);
@@ -302,7 +313,6 @@ input:focus, textarea:focus { background-color: white; border-color: var(--accen
     margin-bottom: .3em;
 }
 
-/* Asegurar que el número de teléfono y email sean blancos */
 .footer-content .contact-info p, 
 .footer-content .contact-info a {
     color: #ffffff !important;
@@ -316,7 +326,7 @@ input:focus, textarea:focus { background-color: white; border-color: var(--accen
 .footer-links a:hover { color: #ffffff; text-decoration: underline; }
 
 .copyright {
-    color: #ffffff !important; /* Copyright blanco forzado */
+    color: #ffffff !important;
     text-align: right;
     margin-top: 1.8em;
     width: 100%;
