@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aerodinámica - F1 & Física</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,9 +19,10 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="aerodynamics.html" aria-current="page">Aerodinámica y Auto</a></li>
                     <li><a href="drivers-physics.html">Pilotos y Física</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="#main-content" class="btn cta-btn">Leer</a></li>
                 </ul>
             </nav>
-            <a href="#main-content" class="btn cta-btn">Leer</a>
         </div>
     </header>
 
@@ -34,7 +35,7 @@
             </p>
             
             <div class="decorative-banner">
-                <img src="https://images.unsplash.com/photo-1535970793482-07de93762dc4?auto=format&fit=crop&w=1200&q=80" alt="" role="presentation" class="responsive-img shadow-img">
+                <img src="/assets/MonoplazaCorriendo.jpg" alt="Monoplaza de Fórmula 1 corriendo en pista recta con estela aerodinámica" class="responsive-img shadow-img">
             </div>
         </section>
 
@@ -60,7 +61,7 @@
             <div class="container">
                 <h2>Neumáticos, Agarre y Curvas</h2>
                 <figure class="info-figure">
-                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80" alt="Coche de carreras en curva mostrando deformación del neumático" class="responsive-img">
+                    <img src="/assets/ChecoOvertakesAlbon.jpg" alt="Sergio Pérez adelanta a Alexander Albon en una curva estrecha demostrando agarre máximo del neumático" class="responsive-img">
                     <figcaption>La superficie de contacto del neumático es la única conexión con la carretera.</figcaption>
                 </figure>
                 <p>
@@ -86,21 +87,24 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-content">
-            <div class="contact-info">
-                <h3>F1 Physics Project</h3>
-                <p><a href="mailto:f1physics@example.com">f1physics@example.com</a></p>
-            </div>
-            <nav aria-label="Navegación Secundaria">
-                <ul class="footer-links">
+        <div class="container footer-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 2rem;">
+            <section class="contact-info" style="flex:1; min-width: 220px;">
+                <h2 style="font-size: 1.15rem;">Contacto</h2>
+                <p style="margin: .3em 0;"><a href="mailto:f1physics@example.com">f1physics@example.com</a></p>
+                <p style="margin: .3em 0;">+52 55 1234 5678</p>
+            </section>
+            <nav aria-label="Navegación Secundaria" style="flex:1; min-width: 150px;">
+                <ul class="footer-links" style="padding-left: 0; list-style: none;">
                     <li><a href="#">Volver arriba</a></li>
                     <li><a href="#">Privacidad</a></li>
                     <li><a href="https://www.formula1.com" target="_blank" rel="noopener noreferrer">Sitio Oficial F1</a></li>
                 </ul>
             </nav>
-            <p class="copyright">&copy; 2023. Todos los derechos reservados.</p>
+            <div style="flex: 1; min-width: 180px; display: flex; align-items: flex-end; justify-content: flex-end;">
+                <p class="copyright" style="text-align:right;">&copy; 2023. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
-
+    <script src="js/toggles.js"></script>
 </body>
 </html>

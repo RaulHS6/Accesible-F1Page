@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Accesible - F1 & Física</title>
+  <link rel="stylesheet" href="style/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo-container">
+        <h1 class="logo">F1 <span class="highlight">Physics</span></h1>
+        <p class="tagline">La ciencia detrás de la velocidad</p>
+      </div>
+      <nav aria-label="Navegación Principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="aerodynamics.html">Aerodinámica y Auto</a></li>
+          <li><a href="drivers-physics.html">Pilotos y Física</a></li>
+          <li><a href="video.html" aria-current="page">Video</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="container section video-accessibility" style="max-width:700px; margin:0 auto;">
+      <h1 style="text-align:center;">Video educativo: Física en la Fórmula 1</h1>
+      <div class="video-wrapper" style="margin-bottom: 1.5rem;">
+        <iframe 
+          src="https://www.youtube.com/embed/tQgkt3y5DSg?si=u3kCeyvbKaCc4gXB"
+          title="Video explicativo sobre la física en la Fórmula 1" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="video-controls" style="display:flex;flex-direction:row;justify-content:center;gap:1.2rem;margin-bottom:2rem;">
+        <button type="button" id="btn-captions" aria-expanded="false" aria-controls="captions-content" class="btn secondary-btn">
+          Ver Transcripción
+        </button>
+        <button type="button" id="btn-ad" aria-expanded="false" aria-controls="ad-content" class="btn secondary-btn">
+          Ver Audio Descripción
+        </button>
+      </div>
+      <div id="captions-content" class="transcript-box" hidden>
+        <h2 style="font-size:1.2rem;">Transcripción</h2>
+        <p>
+          [Música dinámica] Narrador: La F1 es el pináculo del deporte motor. (0:15) Vemos un coche en el túnel de viento. El aire fluye sobre el alerón, creando baja presión debajo y alta arriba: esto es Carga Aerodinámica. (0:45) Un piloto frena. La energía cinética se vuelve calor en los frenos a 1000°C. (1:10) La fricción de los neumáticos permite curvas a 5G.
+        </p>
+      </div>
+      <div id="ad-content" class="ad-box" hidden>
+        <h2 style="font-size:1.2rem;">Audio Descripción</h2>
+        <p>
+          El video muestra coches de F1 en circuito soleado. Gráficos azules ilustran el flujo del aire sobre el chasis. Primer plano de un disco de freno al rojo vivo. Animación 3D de la goma del neumático deformándose contra el asfalto.
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <section class="contact-info">
+        <h2>Contacto</h2>
+        <p><a href="mailto:f1physics@example.com">f1physics@example.com</a></p>
+        <p>+52 55 1234 5678</p>
+      </section>
+      <nav aria-label="Navegación Secundaria">
+        <ul class="footer-links">
+          <li><a href="#">Volver arriba</a></li>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="https://www.formula1.com" target="_blank" rel="noopener noreferrer">Sitio Oficial F1</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="copyright">&copy; 2023. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/toggles.js"></script>
+</body>
+</html>
